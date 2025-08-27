@@ -5,7 +5,7 @@ require("dotenv").config();
 const mongoose=require("mongoose");
 const path=require("path");
 const methodoverride=require("method-override");
-const ejsmate=require("ejs-mate");
+const ejsMate = require('ejs-mate');
 const ExpressError=require("./utils/ExpressError.js");
 const User=require("./models/user.js");
 const listingsRouter=require("./routes/listing.js");
@@ -36,7 +36,7 @@ app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
 app.use(express.urlencoded({extended:true}));
 app.use(methodoverride("_method"));
-app.engine("ejs",ejsmate);
+app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
 
 // app.get("/",(req,res)=>{
