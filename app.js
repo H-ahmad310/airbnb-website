@@ -5,7 +5,7 @@ require("dotenv").config();
 const mongoose=require("mongoose");
 const path=require("path");
 const methodoverride=require("method-override");
-const ejsmate=require("ejs-Mate");
+const ejsmate=require("ejs-mate");
 const ExpressError=require("./utils/ExpressError.js");
 const User=require("./models/user.js");
 const listingsRouter=require("./routes/listing.js");
